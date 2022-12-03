@@ -3,7 +3,7 @@ import styles from './Container.module.scss';
 
 interface Props {
     children: React.ReactNode,
-}
+};
 
 const Container: React.FC<Props> = ({ children }) => {
 

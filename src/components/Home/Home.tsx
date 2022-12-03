@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 interface Props {
     setUser: React.Dispatch<React.SetStateAction<string>>,
-}
+};
 
 const Home: React.FC<Props> = ({ setUser }) => {
 
@@ -20,7 +20,7 @@ const Home: React.FC<Props> = ({ setUser }) => {
         else { // left it just in case as the 'required' property is used in input tag too
             console.log('error');
         }
-    }
+    };
 
     return (
         <form className={styles.home} onSubmit={handleSubmit}>

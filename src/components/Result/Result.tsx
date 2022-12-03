@@ -6,7 +6,7 @@ interface Props {
     user: string,
     score: number,
     setScore: React.Dispatch<React.SetStateAction<number | undefined>>,
-}
+};
 
 const Result: React.FC<Props> = ({ user, score, setScore }) => {
     return (

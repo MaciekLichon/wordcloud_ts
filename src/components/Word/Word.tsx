@@ -4,12 +4,12 @@ import { useState, useCallback, useEffect } from 'react';
 
 
 interface Props {
-    addSelected: (word: string) => void, // or React.ReactNode tbc
+    addSelected: (word: string) => void, 
     removeSelected: (word: string) => void,
     isGoodWord: boolean,
     selecting: boolean,
-    children: string //or React.ReactNode tbc
-}
+    children: string 
+};
 
 const Word: React.FC<Props> = ({ addSelected, removeSelected, isGoodWord, selecting, children }) => {
 
@@ -18,18 +18,18 @@ const Word: React.FC<Props> = ({ addSelected, removeSelected, isGoodWord, select
 
     const updateMargin = useCallback(() => {
         setMargin(`${Math.floor(Math.random() * (50 - 20) + 20)}px`);
-    }, [])
+    }, []);
 
     useEffect(() => {
         updateMargin();
-    }, [])
+    }, []);
     /* RANDOM MARGIN GENERATOR - END */
 
     const [selected, setSelected] = useState<boolean>(false);
 
     const toggleSelected = (e: React.FormEvent) => {
         e.preventDefault();
-    
+
         if (selected) {
           setSelected(false);
           removeSelected(children);

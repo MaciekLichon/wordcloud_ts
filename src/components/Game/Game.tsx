@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 interface Props {
     setScore: React.Dispatch<React.SetStateAction<number | undefined>>,
-}
+};
 
 const Game: React.FC<Props> = ({ setScore }) => {
 
@@ -66,7 +66,7 @@ const Game: React.FC<Props> = ({ setScore }) => {
 
         score = correctSelections * 2 - incorrectSelections - additionalDeduction;
         setScore(score);
-    }
+    };
 
     return (
         <div className={styles.game}>

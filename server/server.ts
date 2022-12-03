@@ -16,9 +16,9 @@ app.use('/api', questionsRoutes);
 /* MIDDLEWARE */
 app.use((req: Request, res: Response) => {
   res.status(404).json({ message: 'Not found...' })
-})
+});
 
 /* SERVER PORT */
 app.listen(8000, () => {
   console.log('Server is running on port: 8000');
-})
+});
