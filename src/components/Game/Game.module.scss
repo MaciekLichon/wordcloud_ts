@@ -1,0 +1,20 @@
+@import '../../styles/settings.scss';
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  .question {
+    margin: 0;
+  }
+
+  .board {
+    width: 400px;
+    border: 1px solid $color-dark;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+}

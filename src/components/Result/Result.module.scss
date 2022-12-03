@@ -1,0 +1,9 @@
+@import '../../styles/settings.scss';
+
+.result {
+  text-align: center;
+
+  .score {
+    color: $color-button;
+  }
+}

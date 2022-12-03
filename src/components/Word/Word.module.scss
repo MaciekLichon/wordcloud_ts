@@ -1,0 +1,48 @@
+@import '../../styles/settings.scss';
+
+.word {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 20px;
+  opacity: 0.5;
+
+  &.selected {
+    font-weight: 800;
+    opacity: 1;
+
+    &.bad {
+      color: $color-wrong;
+      position: relative;
+    }
+    &.bad::after {
+      content: 'Bad';
+      color: $color-wrong;
+    }
+
+    &.good {
+      color: $color-success;
+      position: relative;
+    }
+    &.good::after {
+      content: 'Good';
+      color: $color-success;
+    }
+  }
+
+}
+
+.bad::after, .good::after {
+  opacity: 0.7;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  font-size: 15px;
+  transform: translateX(-50%);
+}
+
+.word.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
